@@ -20,16 +20,9 @@ Se utilizó una versión de Python v3.7 para la ejecución de los scripts, y [vi
 
 Para la construcción de la API se utilizó la librería [Flask](https://pypi.org/project/Flask/).
 
-## Descripción del contenido
-
-La configuración del ambiente virtual de Python para la replicabilidad de los resultados exhibidos se encuentra en el archivo [requirements.txt](https://github.com/moebius-analitica/meetup-webscraping/edit/master/requirements.txt)
-
-Para aquellos que quieran obtener los datos de forma inmediata, tenemos disponible el siguiente repositorio [Drive](https://drive.google.com/drive/folders/1WRNEnmRX9uDpkg7SyhW2gd5pplM4FRA4?usp=sharing) para que accedan de forma libre.
-
-## Estructura del repositorio
-
+Para dar contexto al problema, en este [enlace](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists) se encuentra una referencia.
 
 
 ## Autoría
 
-* **Joaquín Ureta - Moebius Analítica** - [Webpage](https://www.moebius-analitica.cl/)
+* **Joaquín Ureta | Moebius Analítica** - [Webpage](https://www.moebius-analitica.cl/)
