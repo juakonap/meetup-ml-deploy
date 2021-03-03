@@ -14,14 +14,11 @@ El siguiente repositorio contiene el código fuente oficial de la charla ***Base
 
 ## Herramientas utilizadas
 
-El proyecto general se montó en el OS Ubuntu v18.04 LTS, en una VM levantada en AWS (t2.micro).
+El proyecto, en su componente cloud, se montó en el OS Ubuntu v18.04 LTS, en una VM levantada en AWS (t2.micro).
 
-Para llevar a cabo los scrapers se utilizó Python v3.7, y creación de un ambiente virtual usando [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
+Se utilizó una versión de Python v3.7 para la ejecución de los scripts, y [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html) para la creación del ambiente virtual de trabajo.
 
-En el caso de simular el navegador web para realizar el scraping interactivo se utilizó selenium, con [Chromium](https://chromedriver.chromium.org/).
-
-Para el procesamiento de imágenes se utilizó la API de [Tesseract](https://github.com/tesseract-ocr/tesseract/wiki) en Python.
-
+Para la construcción de la API se utilizó la librería [Flask](https://pypi.org/project/Flask/).
 
 ## Descripción del contenido
 
@@ -31,16 +28,8 @@ Para aquellos que quieran obtener los datos de forma inmediata, tenemos disponib
 
 ## Estructura del repositorio
 
-En primer lugar, realizamos la descarga de los archivos provenientes de la Dirección del Trabajo: [Nómina de empresas acogidas a la Ley 21.227](https://www.dt.gob.cl/portal/1626/w3-article-118613.html). Para este ejercicio, se utilizaron los documentos asociados a las nóminas de empresas acogidas a la "Reducción de Jornada". No obstante, el script recoge todos las nóminas. Para esto se ocupa el código [downloadDocs.py](https://github.com/moebius-analitica/meetup-webscraping/blob/master/src/downloadDocs.py)
 
-Posteriormente, se realiza la transformación de los documentos en datos mediante el uso de [tabula-py](https://pypi.org/project/tabula-py/). El código que realiza esta transformación es [pdfToData.py](https://github.com/moebius-analitica/meetup-webscraping/blob/master/src/pdfToData.py).
-
-Ahora, para ir nutriendo la información obtenida anteriormente, se realizan scrapers [Situación tributaria de Terceros del SII](https://zeus.sii.cl/cvc/stc/stc.html) y [Consulta pública de multas ejecutoriadas](https://ventanilla.dirtrab.cl/RegistroEmpleador/consultamultas.aspx). Para este último, el código es [multaScraper.py](https://github.com/moebius-analitica/meetup-webscraping/blob/master/src/multaScraper.py).
-
-Y a modo de complementaridad, se disponibilizan demos para bypassear captchas numéricos mediante los métodos [SIIDemo.py](https://github.com/moebius-analitica/meetup-webscraping/blob/master/src/SIIDemo.py) y [tessDemo.py](https://github.com/moebius-analitica/meetup-webscraping/blob/master/src/tessDemo.py), con sus respectivas configuraciones.
-
-Toda esta masividad de datos da la oportunidad para que cada uno de Uds. pueda realizar sus análisis. Así que, ¡A jugar!
 
 ## Autoría
 
-* **Moebius Analítica** - [Webpage](https://www.moebius-analitica.cl/)
+* **Joaquín Ureta - Moebius Analítica** - [Webpage](https://www.moebius-analitica.cl/)
