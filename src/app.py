@@ -3,7 +3,7 @@ from flask import request
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-server = app.server
+#server = app.server
 
 from flask_cors import CORS
 CORS(app)
