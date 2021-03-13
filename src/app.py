@@ -33,9 +33,9 @@ def predict():
                            ]])
     return str(round(target[0],3))
 
-'''
+
 if __name__ == "__main__":
-    app.run(debug=True)
-'''
+    app.run_server(debug=True)
+
 
 #http://127.0.0.1:5000/predict?city=5&city_development_index=0.92&gender=1&relevent_experience=0&enrolled_university=3&education_level=3&major_discipline=1&experience=21&company_size=8&company_type=3&last_new_job=0&training_hours=36
