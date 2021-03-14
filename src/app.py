@@ -3,18 +3,17 @@ from flask import request
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-server = app.server
 
 from flask_cors import CORS
 CORS(app)
 
 # main index page route
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
-    return '<h1> La aplicación está funcionando!</h1>'
+    return '<h1> La aplicación está funcionando, créanme!</h1>'
 
 
-@app.route('/predict',methods=['POST'])
+@app.route('/prediccion', methods=['GET','POST'])
 def predict():
     import pickle
     lgbm = pickle.load(open('hr_ds-lgbm-model.ml', 'rb'))
@@ -33,9 +32,13 @@ def predict():
                            ]])
     return str(round(target[0],3))
 
+@app.route('/predict')
+def message():
+    return '<h1> Favor dirígase al método /prediccion</h1>'
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True, port=5000)
+
 
 
 #http://127.0.0.1:5000/predict?city=5&city_development_index=0.92&gender=1&relevent_experience=0&enrolled_university=3&education_level=3&major_discipline=1&experience=21&company_size=8&company_type=3&last_new_job=0&training_hours=36
